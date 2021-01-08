@@ -5,6 +5,8 @@ var app = express()
 var server = http.Server(app) 
 var Article = require('./article.model') 
 
+
+//mongose
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 var dbURL = 'mongodb://localhost:27017/cse309'
@@ -12,7 +14,6 @@ mongoose.connect(dbURL, {useNewUrlParser:true,useUnifiedTopology:true});
 mongoose.connection.on('error', function (err)  {
     console.log(err)
  });
-
 
  
 app.use(bodyParser.json())
@@ -105,3 +106,4 @@ process.env.IP || 'localhost', function(){
 console.log('Server running');
 })
 module.exports = {app, server, mongoose}
+
