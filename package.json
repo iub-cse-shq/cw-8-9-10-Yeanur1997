@@ -19,6 +19,7 @@
         "testEnvironment": "node"
     },
     "dependencies": {
+        "ejs": "^3.1.5",
         "mongoose": "^5.11.8"
     }
 }
